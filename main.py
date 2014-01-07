@@ -4,17 +4,18 @@ def dead(reason):
   print "%s. You're a sucker!" % reason
   
 def start(name):
-  print """It was a cold day of January. The year 2014 had just begun.
+  print """Hello £s ! It was a cold day of January. The year 2014 had just begun.
   At the time, my milkshakes used to bring all the boys to the yard. Damn right it was better than yours.
-  You're now in my past. What do you want to do?"""
+  You're now in my past. What do you want to do?""" % name
   
-  next = raw_input("NotZork> ")
-  if "house" in next or "go in" in next:
-    enter_house()
-  elif "look around" in next or "explore" in next:
-    explore()
-  else:
-    dead("Your head was chopped off by the illusion of your indecision")
+  while True:
+    next = raw_input("NotZork> ")
+    if "house" in next or "go in" in next:
+      enter_house()
+    elif "look around" in next or "explore" in next:
+      explore()
+    else:
+      dead("Your head was chopped off by the illusion of your indecision")
     
 def enter_house():
   print "You've entered my house. Watch out for the giant pink elephant in the corner"
@@ -33,4 +34,8 @@ def explore():
     print "You win because I'm bored to death so I'm gonna do something else"
     exit(0)
 
+def win()
+  print "A flock of women arrives at your destination. Unfortunately they have no heads. Too bad."
+  dead("You die of indecision based on the wrongfulness of your choices")
+  
 start(raw_input("What's your name?> "))
