@@ -3,7 +3,7 @@ from sys import exit
 def dead(reason):
   print "%s. You're a sucker!" % reason
   
-def start():
+def start(name):
   print """It was a cold day of January. The year 2014 had just begun.
   At the time, my milkshakes used to bring all the boys to the yard. Damn right it was better than yours.
   You're now in my past. What do you want to do?"""
@@ -32,3 +32,5 @@ def explore()
   else
     print "You win because I'm bored to death so I'm gonna do something else"
     exit(0)
+
+start(raw_input("What's your name?> "))
