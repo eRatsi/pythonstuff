@@ -34,7 +34,7 @@ def explore():
     print "You win because I'm bored to death so I'm gonna do something else"
     exit(0)
 
-def win()
+def win():
   print "A flock of women arrives at your destination. Unfortunately they have no heads. Too bad."
   dead("You die of indecision based on the wrongfulness of your choices")
   
