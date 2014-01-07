@@ -4,7 +4,7 @@ def dead(reason):
   print "%s. You're a sucker!" % reason
   
 def start(name):
-  print """Hello £s ! It was a cold day of January. The year 2014 had just begun.
+  print """Hello %s ! It was a cold day of January. The year 2014 had just begun.
   At the time, my milkshakes used to bring all the boys to the yard. Damn right it was better than yours.
   You're now in my past. What do you want to do?""" % name
   
