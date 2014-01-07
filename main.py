@@ -2,6 +2,7 @@ from sys import exit
 
 def dead(reason):
   print "%s. You're a sucker!" % reason
+  exit(0)
   
 def start(name):
   print """Hello %s ! It was a cold day of January. The year 2014 had just begun.
