@@ -54,18 +54,21 @@ class Visitor(object):
 """
 The next block of code is to test Adapter and Visitor classes
 """
-objects = []
-runner1 = Runner("Usain Bolt")
-swimmer1 = Swimmer("Michael Phelps")
-thrower1 = Thrower("Margus Hunt", "footballs")
-visitor = Visitor()
-objects.append(Adapter(runner1, dict(do_sth=runner1.run)))
-objects.append(Adapter(swimmer1, dict(do_sth=swimmer1.swim)))
-objects.append(Adapter(thrower1, dict(do_sth=thrower1.throw_thing)))
-visitor.visit(Adapter(runner1, dict(do_sth=runner1.run)))
-visitor.visit(Adapter(swimmer1, dict(do_sth=swimmer1.swim)))
-visitor.visit(Adapter(thrower1, dict(do_sth=thrower1.throw_thing)))
-
-for obj in objects:
-	print("I am {0} and {1}".format(obj.name, obj.do_sth()))
+def main():
+	objects = []
+	runner1 = Runner("Usain Bolt")
+	swimmer1 = Swimmer("Michael Phelps")
+	thrower1 = Thrower("Margus Hunt", "footballs")
+	visitor = Visitor()
+	objects.append(Adapter(runner1, dict(do_sth=runner1.run)))
+	objects.append(Adapter(swimmer1, dict(do_sth=swimmer1.swim)))
+	objects.append(Adapter(thrower1, dict(do_sth=thrower1.throw_thing)))
+	visitor.visit(Adapter(runner1, dict(do_sth=runner1.run)))
+	visitor.visit(Adapter(swimmer1, dict(do_sth=swimmer1.swim)))
+	visitor.visit(Adapter(thrower1, dict(do_sth=thrower1.throw_thing)))
+	
+	for obj in objects:
+		print("I am {0} and {1}".format(obj.name, obj.do_sth()))
 		
+if __name__='__main__':
+	main()
