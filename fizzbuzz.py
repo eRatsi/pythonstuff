@@ -1,3 +1,4 @@
+# Written in Python 3
 def fizzbuzz(seq):
 	output = []
 	for i in range(1, seq, 1):
@@ -10,6 +11,6 @@ def fizzbuzz(seq):
 	return output
 
 def main():
-	print(", ".join(fizzbuzz(int(input("FizzBuzz: ")))))
+	print(", 	".join(fizzbuzz(int(input("FizzBuzz: ")))))
 if __name__ == '__main__':
 		main()
