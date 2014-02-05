@@ -11,6 +11,6 @@ def fizzbuzz(seq):
 	return output
 
 def main():
-	print(", 	".join(fizzbuzz(int(input("FizzBuzz: ")))))
+	print(", ".join(fizzbuzz(int(input("FizzBuzz: ")))))
 if __name__ == '__main__':
 		main()
