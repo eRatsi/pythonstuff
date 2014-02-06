@@ -8,9 +8,9 @@ app = Flask(__name__)
 def index():
 	return "Hello World!"
 
-@app.route('/hello/')
-@app.route('/hello/<year>')
-def hello(year=None):
+@app.route('/receivers/')
+@app.route('/receivers/<year>')
+def getReceivers(year=None):
 	games = nflgame.games(int(year))
 	players = nflgame.combine(games)
 	myQuery = {}

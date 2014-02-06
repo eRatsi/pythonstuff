@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>A webpage</title>
+	<title>NFL Stats</title>
 <script type="text/javascript" src="{{ url_for('static', filename='jquery-1.11.0.min.js') }}"></script>
 </head>
 <body>
-	<h2>NFL Season: {{ year }}</h2>
+	<h1>Top 10 receivers for the NFL Season: {{ year }}</h1>
 	<ul>
 		{% for key, value in myQuery.iteritems() %}
-			<li>{{ key }} has received for {{ value }}</li>
+			<li>{{ key }} has received for {{ value }} yards</li>
 		{% endfor %}
 	</ul>
 </body>
