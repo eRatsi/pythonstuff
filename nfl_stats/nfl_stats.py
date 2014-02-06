@@ -17,3 +17,8 @@ def getReceivers(players):
 	for p in players.receiving().sort("receiving_yds").limit(10):
 		myQuery.append({"name" : p, "receiving yards" : p.receiving_yds})
 	return json.dumps(myQuery)
+
+def main():
+	players = getPlayers(2013)
+	getReceivers(players)
+	getRushers(players)
