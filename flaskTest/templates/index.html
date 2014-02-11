@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="../static/style.css">
 	<title>NFL Stats</title>
 </head>
 <body>
+<nav>
+	{% if player == "receivers" %}
 	<h1>Top 10 receivers for the NFL Season: {{ year }}</h1>
 	<ul>
 		{% for key, value in myQuery.iteritems() %}
 			<li>{{ key }} has received for {{ value }} yards</li>
+
 		{% endfor %}
 	</ul>
+	{% elif player == "rushers" %}
+	<h1>Top 10 rushers for the NFL Season: {{ year }}</h1>
+	<ul>
+		{% for key, value in myQuery.iteritems() %}
+			<li>{{ key }} has rushed for {{ value }} yards</li>
+
+		{% endfor %}
+	</ul>
+	{% endif %}
+</nav>
 </body>
 </html>
